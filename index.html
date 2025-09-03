@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sokleap Seng - Front-End Developer Portfolio. Passionate about creating beautiful, functional, and user-friendly web experiences with React, Vue.js, and modern web technologies." />
+    <meta name="keywords" content="Sokleap Seng, Front-End Developer, React, Vue.js, TypeScript, Tailwind CSS, Web Developer, Portfolio" />
+    <meta name="author" content="Sokleap Seng" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sokleap Seng - Front-End Developer" />
+    <meta property="og:description" content="Passionate front-end developer creating beautiful web experiences with React, Vue.js, and modern technologies." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sokleap-portfolio.netlify.app" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sokleap Seng - Front-End Developer" />
+    <meta name="twitter:description" content="Passionate front-end developer creating beautiful web experiences." />
+    
+    <title>Sokleap Seng - Front-End Developer Portfolio 💻</title>
+    
+    <!-- Preload key fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Custom cursor styles for enhanced UX -->
+    <style>
+      * {
+        cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='10' fill='%2300bcd4' fill-opacity='0.5'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23ff4081'/%3E%3C/svg%3E"), auto;
+      }
+      
+      a, button {
+        cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='10' fill='%23ff4081' fill-opacity='0.8'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%2300bcd4'/%3E%3C/svg%3E"), pointer;
+      }
+      
+      /* Smooth scrolling for the entire page */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Custom scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #00bcd4, #ff4081);
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #0097a7, #e91e63);
+      }
+      
+      /* Loading animation */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #00bcd4, #ff4081);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .loading-screen.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      .loader {
+        width: 60px;
+        height: 60px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loader"></div>
+    </div>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Loading screen script -->
+    <script>
+      window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        setTimeout(() => {
+          loadingScreen.classList.add('fade-out');
+          setTimeout(() => {
+            loadingScreen.style.display = 'none';
+          }, 500);
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
