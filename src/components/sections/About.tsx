@@ -35,7 +35,7 @@ const About: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">My Story</h3>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  I'm Sokleap,I'm a student at Passerelles Numériques Cambodia(PNC), I study Web development, in Phnom Penh, Cambodia. 
+                  My name is Sokleap SENG,I'm a student at Passerelles Numériques Cambodia(PNC), I study Web development, in Phnom Penh, Cambodia. 
                   My journey into web development started during my university years when I first discovered 
                   the magic of turning ideas into interactive digital experiences.
                 </p>
